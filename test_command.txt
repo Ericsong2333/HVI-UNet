@@ -1,0 +1,9 @@
+#### training ####
+
+python test.py -dp dataset/DRIVE -wp pretrained_weights/DRIVE/checkpoint-epoch40.pth --show
+python test.py -dp dataset/HVI -wp pretrained_weights/DRIVE/checkpoint-epoch40.pth --show
+
+#### preparing dataset ####
+
+python data_process_2.py -dp dataset/HVI -dn HVI
+
