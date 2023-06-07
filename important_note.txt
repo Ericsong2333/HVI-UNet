@@ -1,0 +1,13 @@
+Install nvidia-cuda-toolkit Using apt-get
+---------------------------------------------
+sudo apt-get update
+sudo apt-get -y install nvidia-cuda-toolkit
+
+
+When installing the dependencies, install torch 1.7.0 with cuda11
+
+---------------------------------------------
+pip install torch==1.7.0+cu110 torchvision==0.8.1+cu110 torchaudio==0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
+---------------------------------------------
+
+https://discuss.pytorch.org/t/nvidia-geforce-rtx-3090-with-cuda-capability-sm-86-is-not-compatible-with-the-current-pytorch-installation/141940
