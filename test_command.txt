@@ -1,9 +1,19 @@
-#### training ####
+#### preparing dataset ####
+*All folder name need to match exactly
+1. Clear the dataset/HVI folder
+2. Create test and training folder inside HVI folder
+3. In future if we have labeled HVI dataset, put Put ground truth of the labeled image in training/1st_manual, and original image in training/images in order to train. (python train.py -dp dataset/HVI)
+4. In order to test (segment) images Put ground truth of the labeled image in test/1st_manual (Put filler image if it doesn't exist)
+4. Put image that need to be segmented into test/images folder (Numbers of images in these two folders need to match)
+5. If image size is no longer 1024 * 1360, change it in tester.py file in main repository
+6. Use command "python data_process_2.py -dp dataset/HVI -dn HVI" to prepare dataset
 
-python test.py -dp dataset/DRIVE -wp pretrained_weights/DRIVE/checkpoint-epoch40.pth --show
+
+#### Testing ####
+
+Run command below to perform test/segmentation (Note that if in the 1st_manual folder filler images are used, all the performance data like accuracy doesn't mean anything)
+
 python test.py -dp dataset/HVI -wp pretrained_weights/DRIVE/checkpoint-epoch40.pth --show
 
-#### preparing dataset ####
 
-python data_process_2.py -dp dataset/HVI -dn HVI
 
